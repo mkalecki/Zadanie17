@@ -29,16 +29,16 @@ public class TextCalcServlet extends HttpServlet {
         }
 
         string = string.toLowerCase();
-        writer.print("<br/>" + string);
+//        writer.print("<br/>" + string);
         writer.print("<br/>" + string.length() + " znaków bez spacji");
 
         Boolean isPalindrom = false;
-        for (int i = 0; i < string.length(); i++){
+        for (int i = 0; i < string.length(); i++) {
 
-                if (string.charAt(i) != string.charAt(string.length()-1-i)) {
-                    isPalindrom = false;
-                    break;
-                } else isPalindrom = true;
+            if (string.charAt(i) != string.charAt(string.length() - 1 - i)) {
+                isPalindrom = false;
+                break;
+            } else isPalindrom = true;
         }
         writer.print("<br/> czy tekst jest palindromem: " + String.valueOf(isPalindrom));
 
